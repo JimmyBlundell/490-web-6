@@ -1,6 +1,6 @@
 <div class="parent-container">
   <div class="child-container">
-    <h2><b>Search for your recipe!!
+    <h2><b style="background-color: black">Search for your recipe!!
     </b></h2><br>
     <form>
       <div class="form-group">
@@ -9,11 +9,9 @@
           <span class="input-group-addon">-</span>
           <input #place class="form-control" placeholder="Place" type="text">
           <span class="input-group-addon">-</span>
-
         </div>
         <br>
-        <button (click)="getVenues()" class="btn btn primary col-lg-2 col-lg-offset-5 " type="button">Go</button>
-
+        <button (click)="getVenues()" class="btn btn primary col-lg-2 col-lg-offset-5" style="color: black"type="button">Go</button>
       </div>
     </form>
   </div>
@@ -22,7 +20,7 @@
   <div class="row">
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
-        <div class="panel-heading"><b>How to make</b></div>
+        <div class="panel-heading"><b>HOW TO MAKE:</b></div>
         <div class="panel-body">
           <div *ngFor="let recipe of recipeList" class="list-group-item clearfix">
             <div class="pull-left">
@@ -32,19 +30,15 @@
 
             <span class="pull-right">
           <img src="{{recipe.icon}}" style="width: 70px; height: 50px;" align="center"/>
-
       </span>
-
           </div>
-
         </div>
       </div>
     </div>
     <div class="col-lg-6">
       <div class="panel panel-default col-6">
-        <div class="panel-heading"><b>Where to get</b></div>
+        <div class="panel-heading"><b>WHERE TO GET:</b></div>
         <div class="panel-body">
-
           <div *ngFor="let venue of venueList" class="list-group-item clearfix">
             <div class="pull-left">
               <h4 class="list-group-item-heading">{{ venue.name }}</h4>
@@ -55,9 +49,7 @@
              &daddr={{venue.location.formattedAddress[0]}},{{venue.location.formattedAddress[1]}},{{venue.location.formattedAddress[2]}}">
                <img src="../../assets/google.png" style="width: 30px; height: 30px;"></a>
       </span>
-
           </div>
-
         </div>
       </div>
     </div>
